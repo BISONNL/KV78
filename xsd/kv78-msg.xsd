@@ -3,8 +3,8 @@
 <!-- Copyright:	Dit document is eigendom van Platform BISON onder de Stichting Connekt,-->
 <!--            wordt gepubliceerd onder de Creative Commons Licentie by-nd/3.0/nl, 	 -->
 <!--            zie http://creativecommons.org/licences/by-nd/3.0/nl                   -->
-<!-- Opmerking: XSD is gebaseerd op TMI8 koppelvlakken 7 en 8 versie 8.1.0.0	         -->
-<!-- Version:   1.0 (release v8.1.0.0)   (26-05-2009)                                  -->
+<!-- Opmerking: XSD is gebaseerd op TMI8 koppelvlakken 7 en 8   (v8.2.0)	         -->
+<!-- Version:  1.1  (september 2017)                                  -->
 <!-- History:                                                                          -->
 <!--          1.0: status naar release                   															 -->
 <!--          0.8: versienummering naar v8.1.0.0, status pre-release                   -->
@@ -192,6 +192,9 @@
 			<xs:element name="destinationdetail19" type="tmi8:destinationdetail19Type" minOccurs="0"/>
 			<xs:element name="destinationdetail16" type="tmi8:destinationdetail16Type" minOccurs="0"/>
 			<xs:element name="destinationdisplay16" type="tmi8:destinationdisplay16Type" minOccurs="0"/>
+			<xs:element name="desticon" type="tmi8:iconUrlType" minOccurs="0"/>
+			<xs:element name="destcolor" type="tmi8:colorType" minOccurs="0"/>
+			<xs:element name="desttextcolor" type="tmi8:colorType" minOccurs="0"/>
 			<xs:sequence minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="tmi8c:delimiter"/>
 				<xs:any namespace="##targetNamespace ##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
@@ -228,6 +231,12 @@
 			<xs:element name="journeystoptype" type="tmi8:journeystoptypeType"/>
 			<xs:element name="istimingstop" type="tmi8:tmibooleanType"/>
 			<xs:element name="productformulatype" type="tmi8:productformulatypeType"/>
+			<xs:element name="getin" type="tmi8:tmibooleanType"/>
+			<xs:element name="getout" type="tmi8:tmibooleanType"/>
+			<xs:element name="showflexibletrip" type="tmi8:showflexibletripType" minOccurs="0"/>
+			<xs:element name="linedesticon" type="tmi8:iconUrlType" minOccurs="0"/>
+			<xs:element name="linedestcolor" type="tmi8:colorType" minOccurs="0"/>
+			<xs:element name="linedesttextcolor" type="tmi8:colorType" minOccurs="0"/>
 			<xs:sequence minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="tmi8c:delimiter"/>
 				<xs:any namespace="##targetNamespace ##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
@@ -242,6 +251,9 @@
 			<xs:element name="linename" type="tmi8:name50Type"/>
 			<xs:element name="linevetagnumber" type="tmi8:linevetagnumberType"/>
 			<xs:element name="transporttype" type="tmi8:transporttypeType"/>
+			<xs:element name="lineicon" type="tmi8:iconUrlType" minOccurs="0"/>
+			<xs:element name="linecolor" type="tmi8:colorType" minOccurs="0"/>
+			<xs:element name="linetextcolor" type="tmi8:colorType" minOccurs="0"/>
 			<xs:sequence minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="tmi8c:delimiter"/>
 				<xs:any namespace="##targetNamespace ##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
@@ -325,6 +337,12 @@
 			<xs:element name="timingpointdataownercode" type="tmi8:dataownercodeType"/>
 			<xs:element name="timingpointcode" type="tmi8:codeType"/>
 			<xs:element name="journeystoptype" type="tmi8:journeystoptypeType"/>
+			<xs:element name="isadded" type="tmi8:tmibooleanType" minOccurs="0"/>
+			<xs:element name="showcancelledtrip" type="tmi8:tmibooleanType" minOccurs="0"/>
+			<xs:element name="showflexibletrip" type="tmi8:showflexibletripType" minOccurs="0"/>
+			<xs:element name="linedesticon" type="tmi8:iconUrlType" minOccurs="0"/>
+			<xs:element name="linedestcolor" type="tmi8:colorType" minOccurs="0"/>
+			<xs:element name="linedesttextcolor" type="tmi8:colorType" minOccurs="0"/>
 			<xs:sequence minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="tmi8c:delimiter"/>
 				<xs:any namespace="##targetNamespace ##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
@@ -436,7 +454,7 @@
 	<xs:simpleType name="dataownercodeType">
 		<xs:annotation id="E1">
 			<xs:documentation xml:lang="nl">
-	Een en ander bepaalt volgens BISON enumeratie E1. 
+	Een en ander bepaald volgens BISON enumeratie E1. 
 	Op dit moment bekende waardes zijn: 
 		Vervoerders: ARR, VTN, CXX, GVB, HTM, NS, RET, SYNTUS, QBUZZ, TCR, 
 		Integrators:  ALGEMEEN, GOVI, RIG, SABIMOS, PRORAIL 
@@ -450,6 +468,23 @@
 	<xs:simpleType name="codeType">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="iconUrlType">
+		<xs:annotation>
+			<xs:documentation>Format: URL</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1024"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="colorType">
+		<xs:annotation>
+			<xs:documentation>Format: RRGGBB</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="6"/>
+			<xs:maxLength value="6"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="tmibooleanType">
@@ -506,6 +541,13 @@
 			<xs:enumeration value="ACCESSIBLE"/>
 			<xs:enumeration value="NOTACCESSIBLE"/>
 			<xs:enumeration value="UNKNOWN"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="showflexibletripType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TRUE"/>
+			<xs:enumeration value="FALSE"/>
+			<xs:enumeration value="REALTIME"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="journeystoptypeType">
