@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmi8:DRIS_TM_PUSH xmlns:tmi8="http://bison.connekt.nl/tmi8/kv7kv8/msg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bison.connekt.nl/tmi8/kv7kv8/msg kv78.830-msg.xsd">
+	<tmi8:SubscriberID>Siemens-AML</tmi8:SubscriberID>
+	<tmi8:Version>8.3.0</tmi8:Version>
+	<tmi8:DossierName>KV8destinations</tmi8:DossierName>
+	<tmi8:Timestamp>2019-04-11T04:13:54+02:00</tmi8:Timestamp>
+	<tmi8:TimingPoint>
+		<tmi8:QuayCode>NL:Q:58442740</tmi8:QuayCode>
+		<tmi8:KV8destinations>
+			<tmi8:DESTINATION>
+				<tmi8:dataownercode>CXX</tmi8:dataownercode>
+				<tmi8:destinationcode>M270mdrpdl</tmi8:destinationcode>
+				<tmi8:destinationname50>Mijdrecht</tmi8:destinationname50>
+				<tmi8:destinationname30>Mijdrecht</tmi8:destinationname30>
+				<tmi8:destinationname24>Mijdrecht</tmi8:destinationname24>
+				<tmi8:destinationname21>Mijdrecht</tmi8:destinationname21>
+				<tmi8:destinationname19>Mijdrecht</tmi8:destinationname19>
+				<tmi8:destinationname16>Mijdrecht</tmi8:destinationname16>
+			</tmi8:DESTINATION>
+			<tmi8:DESTINATION>
+				<tmi8:dataownercode>CXX</tmi8:dataownercode>
+				<tmi8:destinationcode>M270vinvia</tmi8:destinationcode>
+				<tmi8:destinationname50>Vinkeveen Viaduct</tmi8:destinationname50>
+				<tmi8:destinationname30>Vinkeveen</tmi8:destinationname30>
+				<tmi8:destinationname24>Vinkeveen</tmi8:destinationname24>
+				<tmi8:destinationname19>Vinkeveen</tmi8:destinationname19>
+				<tmi8:destinationname16>Vinkeveen</tmi8:destinationname16>
+			</tmi8:DESTINATION>
+			<tmi8:DESTINATION>
+				<tmi8:dataownercode>CXX</tmi8:dataownercode>
+				<tmi8:destinationcode>M142vuith</tmi8:destinationcode>
+				<tmi8:destinationname50>via Uithoorn</tmi8:destinationname50>
+				<tmi8:destinationname30>via Uithoorn</tmi8:destinationname30>
+				<tmi8:destinationname24>via Uithoorn</tmi8:destinationname24>
+				<tmi8:destinationname19>via Uithoorn</tmi8:destinationname19>
+				<tmi8:destinationname16>via Uithoorn</tmi8:destinationname16>
+			</tmi8:DESTINATION>
+			<tmi8:DESTINATION>
+				<tmi8:dataownercode>CXX</tmi8:dataownercode>
+				<tmi8:destinationcode>M272asmtvs</tmi8:destinationcode>
+				<tmi8:destinationname50>Aalsmeer TV-Studio</tmi8:destinationname50>
+				<tmi8:destinationname30>Aalsmeer</tmi8:destinationname30>
+				<tmi8:destinationname24>Aalsmeer</tmi8:destinationname24>
+				<tmi8:destinationname19>Aalsmeer</tmi8:destinationname19>
+				<tmi8:destinationname16>Aalsmeer</tmi8:destinationname16>
+			</tmi8:DESTINATION>
+			<tmi8:DESTINATION>
+				<tmi8:dataownercode>CXX</tmi8:dataownercode>
+				<tmi8:destinationcode>M272schns</tmi8:destinationcode>
+				<tmi8:destinationname50>Schiphol Centrum Plaza/NS</tmi8:destinationname50>
+				<tmi8:destinationname30>Schiphol Centrum</tmi8:destinationname30>
+				<tmi8:destinationname24>Schiphol Centrum</tmi8:destinationname24>
+				<tmi8:destinationname19>Schiphol Centrum</tmi8:destinationname19>
+				<tmi8:destinationname16>Schiphol Centrum</tmi8:destinationname16>
+			</tmi8:DESTINATION>
+			<tmi8:DESTINATION>
+				<tmi8:dataownercode>CXX</tmi8:dataownercode>
+				<tmi8:destinationcode>M142uitbus</tmi8:destinationcode>
+				<tmi8:destinationname50>Uithoorn Busstation</tmi8:destinationname50>
+				<tmi8:destinationname30>Uithoorn</tmi8:destinationname30>
+				<tmi8:destinationname24>Uithoorn</tmi8:destinationname24>
+				<tmi8:destinationname19>Uithoorn</tmi8:destinationname19>
+				<tmi8:destinationname16>Uithoorn</tmi8:destinationname16>
+			</tmi8:DESTINATION>
+			<tmi8:DESTINATION>
+				<tmi8:dataownercode>CXX</tmi8:dataownercode>
+				<tmi8:destinationcode relevantDestNameDetail='true'>M142wnsbgr</tmi8:destinationcode>
+				<tmi8:destinationname50>Wilnis via Uithoorn</tmi8:destinationname50>
+				<tmi8:destinationname30>Wilnis</tmi8:destinationname30>
+				<tmi8:destinationname24>Wilnis</tmi8:destinationname24>
+				<tmi8:destinationname19>Wilnis</tmi8:destinationname19>
+				<tmi8:destinationname16>Wilnis</tmi8:destinationname16>
+				<tmi8:destinationdetail24>via Uithoorn</tmi8:destinationdetail24>
+				<tmi8:destinationdetail21>via Uithoorn</tmi8:destinationdetail21>
+				<tmi8:destinationdetail19>via Uithoorn</tmi8:destinationdetail19>
+				<tmi8:destinationdetail16>via Uithoorn</tmi8:destinationdetail16>
+			</tmi8:DESTINATION>
+		</tmi8:KV8destinations>
+	</tmi8:TimingPoint>
+</tmi8:DRIS_TM_PUSH>
