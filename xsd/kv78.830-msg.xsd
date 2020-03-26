@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<!-- Copyright: Dit document is eigendom van Platform BISON onder de Stichting Connekt,-->
-<!--            wordt gepubliceerd onder de Creative Commons Licentie by-nd/3.0/nl,    -->
-<!--            zie http://creativecommons.org/licences/by-nd/3.0/nl                   -->
-<!-- Opmerking: XSD is gebaseerd op TMI8 koppelvlakken 7 en 8                          -->
-<!-- Version:  1.2  (maart 2019)                                                       -->
-<!-- History:                                                                          -->
-<!--          1.0: status naar release                                                 -->
-<!--          0.8: versienummering naar v8.1.0.0, status pre-release                   -->
-<!--          0.7: opmerking vanuit review verwerkt                                    -->
-<!--               tabelnamen uitgeschreven (oa DEST = DESTINATION, etc.)              -->
-<!--               DestinationDetail19 en -24 toegevoegd in DESTINATION ovv GOVI       -->
-<!--          0.6: opmerking vanuit review verwerkt                                    -->
-<!--               gebruik geen afkortingen voor tagnames                              -->
-<!--               gebruik voorzover mogelijk geen numerieke waardes voor ENUM         -->
-<!--               gebruik van standaard datum/tijd/boolean types voorzover mogelijk   -->
-<!--               tmitijd formaat patroon selectiever gemaakt (00:00:00 t/m 31:59:59) -->
-<!--          0.5: gebruik korte tagnames ipv lange tagnames                           -->
-<!--               tripnumberType vervangen door journeynumberType                     -->
-<!--          0.4: dossiers element vervangen door kv7* elementen                      -->
-<!--               XSD volledig bijgewerkt volgens TMI8 document                       -->
-<!--  0.1 t/m 0.3: initiele versie met aanpassing als gevolg van document aanpassingen -->
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- Copyright: Dit document is eigendom van Platform BISON onder Samenwerkingsverband DOVA, -->
+<!--            wordt gepubliceerd onder de Creative Commons Licentie by-nd/3.0/nl,          -->
+<!--            zie http://creativecommons.org/licences/by-nd/3.0/nl                         -->
+<!-- Opmerking: Dit XSD is gebaseerd op TMI8 koppelvlakken 7 en 8                            -->
+<!--                                                                                         -->
+<!-- Version:  8.3.0a  (januari 2020)                                                        -->
+<!--                                                                                         -->
+<!-- History:                                                                                -->
+<!--  0.1 t/m 0.3: initiele versie met aanpassing als gevolg van document aanpassingen       -->
+<!--          0.4: dossiers element vervangen door kv7* elementen                            -->
+<!--               XSD volledig bijgewerkt volgens TMI8 document                             -->
+<!--          0.5: gebruik korte tagnames ipv lange tagnames                                 -->
+<!--               tripnumberType vervangen door journeynumberType                           -->
+<!--          0.6: opmerking vanuit review verwerkt                                          -->
+<!--               gebruik geen afkortingen voor tagnames                                    -->
+<!--               gebruik voorzover mogelijk geen numerieke waardes voor ENUM               -->
+<!--               gebruik van standaard datum/tijd/boolean types voorzover mogelijk         -->
+<!--               tmitijd formaat patroon selectiever gemaakt (00:00:00 t/m 31:59:59)       -->
+<!--          0.7: opmerking vanuit review verwerkt                                          -->
+<!--               tabelnamen uitgeschreven (oa DEST = DESTINATION, etc.)                    -->
+<!--               DestinationDetail19 en -24 toegevoegd in DESTINATION ovv GOVI             -->
+<!--          0.8: versienummering naar v8.1.0.0, status pre-release                         -->
+<!--          1.0: status naar release                                                       -->
+<!--       8.3.0a: copyright aangepast                                                       -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tmi8="http://bison.connekt.nl/tmi8/kv7kv8/msg" xmlns:tmi8c="http://bison.connekt.nl/tmi8/kv7kv8/core" targetNamespace="http://bison.connekt.nl/tmi8/kv7kv8/msg" elementFormDefault="qualified">
 	<xs:import namespace="http://bison.connekt.nl/tmi8/kv7kv8/core" schemaLocation="kv78-core.xsd"/>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
