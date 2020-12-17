@@ -494,7 +494,7 @@
     </xs:complexType>
    </xs:element>
    <xs:element name="showoverviewdisplay" type="tmi8:messageshowType" default="true" minOccurs="0"/>
-   <xs:element name="messagepriority" type="tmi8:messagepriorityType" default="MISC" minOccurs="0"/>
+   <xs:element name="messagepriority" type="tmi8:messagepriorityType" minOccurs="0"/>
    <xs:sequence minOccurs="0" maxOccurs="unbounded">
     <xs:element ref="tmi8c:delimiter"/>
     <xs:any namespace="##targetNamespace ##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
