@@ -5,7 +5,7 @@
 <!--            zie http://creativecommons.org/licences/by-nd/3.0/nl                         -->
 <!-- Opmerking: Dit XSD is gebaseerd op TMI8 koppelvlakken 7 en 8                            -->
 <!--                                                                                         -->
-<!-- Version:  8.4.0  (september 2020)                                                       -->
+<!-- Version:  8.50  (februari 2023)                                                       -->
 <!--                                                                                         -->
 <!-- History:                                                                                -->
 <!--  0.1 t/m 0.3: initiele versie met aanpassing als gevolg van document aanpassingen       -->
@@ -26,6 +26,10 @@
 <!--             ...                                                                         -->
 <!--       8.3.0a: copyright aangepast                                                       -->
 <!--        8.4.0: messagepriority toegevoegd aan kv8.generalmessage                         -->
+<!--        8.5.0: kenmerk originalmessagesource toegevoegd aan kv8.generalmessage           -->
+<!--               kenmerk originalmessagecodedate toegevoegd aan kv8.generalmessage en      -->
+<!--               kenmerk originalmessagecodenummer toegevoegd aan kv8.generalmessage       -->
+<!--               kenmerk situationref toegevoegd aan kv8.generalamessage                   -->
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tmi8="http://bison.connekt.nl/tmi8/kv7kv8/msg" xmlns:tmi8c="http://bison.connekt.nl/tmi8/kv7kv8/core" targetNamespace="http://bison.connekt.nl/tmi8/kv7kv8/msg" elementFormDefault="qualified" version="8.4.0">
  <xs:import namespace="http://bison.connekt.nl/tmi8/kv7kv8/core" schemaLocation="kv78-core.xsd"/>
@@ -495,6 +499,10 @@
    </xs:element>
    <xs:element name="showoverviewdisplay" type="tmi8:messageshowType" default="true" minOccurs="0"/>
    <xs:element name="messagepriority" type="tmi8:messagepriorityType" minOccurs="0"/>
+   <xs:element name="originalmessagesource" type="tmi8:originalmessagesourceType" minOccurs="0" default="UNKNOWN"/>
+   <xs:element name="originalmessagecodedate" type="tmi8:tmidateType" minOccus="0"/>
+   <xs:element name="originalmessagecodenumber" type="tmi8:messagecodenumType" minOccus="0"/>
+   <xs:element name="situationref" type="tmi8:anyURIType" minOccurs="0"/>
    <xs:sequence minOccurs="0" maxOccurs="unbounded">
     <xs:element ref="tmi8c:delimiter"/>
     <xs:any namespace="##targetNamespace ##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
@@ -509,7 +517,7 @@
    <xs:element name="timingpointdataownercode" type="tmi8:dataownercodeType"/>
    <xs:choice>
     <xs:element name="timingpointcode" type="tmi8:codeType"/>
-    <xs:element name="quaycode" type="tmi8:quaycodeType"/>
+    <xs:element name="quaycode" type="tmi8:quaycodeType" />
    </xs:choice>
    <xs:sequence minOccurs="0" maxOccurs="unbounded">
     <xs:element ref="tmi8c:delimiter"/>
@@ -602,6 +610,14 @@
  <xs:simpleType name="iconUrlType">
   <xs:annotation>
    <xs:documentation>Format: URL</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:maxLength value="1024"/>
+  </xs:restriction>
+ </xs:simpleType>
+<xs:simpleType name="anyURIType">
+  <xs:annotation>
+   <xs:documentation>any URI </xs:documentation>
   </xs:annotation>
   <xs:restriction base="xs:string">
    <xs:maxLength value="1024"/>
@@ -896,6 +912,16 @@
   <xs:restriction base="xs:string">
    <xs:maxLength value="10"/>
    <xs:pattern value="[\d|_]+"/>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="originalmessagesourceType">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="UNKNOWN"/>
+   <xs:enumeration value="KV15"/>
+   <xs:enumeration value="KV17"/>
+   <xs:enumeration value="CA"/><!-- SIRI Control Actions -->
+   <xs:enumeration value="ET"/><!-- SIRI Estimated Timetable -->
+   <xs:enumeration value="SX"/><!-- SIRI Situation Exchange -->
   </xs:restriction>
  </xs:simpleType>
  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
