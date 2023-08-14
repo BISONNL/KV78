@@ -500,8 +500,8 @@
    <xs:element name="showoverviewdisplay" type="tmi8:messageshowType" default="true" minOccurs="0"/>
    <xs:element name="messagepriority" type="tmi8:messagepriorityType" minOccurs="0"/>
    <xs:element name="originalmessagesource" type="tmi8:originalmessagesourceType" minOccurs="0" default="UNKNOWN"/>
-   <xs:element name="originalmessagecodedate" type="tmi8:tmidateType" minOccus="0"/>
-   <xs:element name="originalmessagecodenumber" type="tmi8:messagecodenumType" minOccus="0"/>
+   <xs:element name="originalmessagecodedate" type="tmi8:tmidateType" minOccurs="0"/>
+   <xs:element name="originalmessagecodenumber" type="tmi8:messagecodenumType" minOccurs="0"/>
    <xs:element name="situationref" type="tmi8:anyURIType" minOccurs="0"/>
    <xs:sequence minOccurs="0" maxOccurs="unbounded">
     <xs:element ref="tmi8c:delimiter"/>
