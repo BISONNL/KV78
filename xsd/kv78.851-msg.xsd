@@ -519,6 +519,9 @@
     <xs:element name="timingpointcode" type="tmi8:codeType"/>
     <xs:element name="quaycode" type="tmi8:quaycodeType" />
    </xs:choice>
+   <xs:element name="originalmessagesource" type="tmi8:originalmessagesourceType" minOccurs="0" default="UNKNOWN"/>
+   <xs:element name="originalmessagecodedate" type="tmi8:tmidateType" minOccurs="0"/>
+   <xs:element name="originalmessagecodenumber" type="tmi8:messagecodenumType" minOccurs="0"/>
    <xs:sequence minOccurs="0" maxOccurs="unbounded">
     <xs:element ref="tmi8c:delimiter"/>
     <xs:any namespace="##targetNamespace ##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>

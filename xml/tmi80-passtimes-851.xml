@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tmi8:DRIS_TM_PUSH xmlns:tmi8="http://bison.connekt.nl/tmi8/kv7kv8/msg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bison.connekt.nl/tmi8/kv7kv8/msg kv78.840-msg.xsd">
+<tmi8:DRIS_TM_PUSH xmlns:tmi8="http://bison.connekt.nl/tmi8/kv7kv8/msg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bison.connekt.nl/tmi8/kv7kv8/msg kv78.851-msg.xsd">
 	<tmi8:SubscriberID>Schiphol-Schiphol</tmi8:SubscriberID>
-	<tmi8:Version>8.5.0</tmi8:Version>
+	<tmi8:Version>8.5.1</tmi8:Version>
 	<tmi8:DossierName>KV8passtimes</tmi8:DossierName>
 	<tmi8:Timestamp>2007-10-31T11:45:21+01:00</tmi8:Timestamp>
 	<tmi8:TimingPoint>
